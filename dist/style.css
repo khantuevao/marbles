@@ -15,9 +15,12 @@ header, footer {
   gap: 0.5rem;
 }
 header {
-  width: 100%;
   padding-left: 5rem;
-  padding-top: 0.95rem;
+  padding-top: 1rem;
+}
+.profile {
+  margin-left: auto;
+  transform: scale(1.5);
 }
 footer {
   flex-direction: column;
@@ -29,7 +32,6 @@ footer {
 }
 .companyname.header {
   font-size: 2rem;
-  display: flex;
 }
 .companyname.footer {
   font-size: 1.4rem;
