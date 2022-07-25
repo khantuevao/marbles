@@ -14,15 +14,25 @@ header, footer {
   align-items: center;
   gap: 0.5rem;
 }
-
 header {
   width: 100%;
   padding-left: 5rem;
   padding-top: 0.95rem;
 }
-
 footer {
   flex-direction: column;
+}
+
+.companyname {
+  font-weight: 900;
+  font-family: 'Space Mono';
+}
+.companyname.header {
+  font-size: 2rem;
+  display: flex;
+}
+.companyname.footer {
+  font-size: 1.4rem;
 }
 
 #menu-open {
@@ -42,6 +52,20 @@ footer {
   transform: scale(0.8);
 }
 
+#menu-close {
+  opacity: 0;
+}
+#menu-close.visible {
+  opacity: 1;
+}
+#menu-close:hover {
+  transition: 0.2s;
+  transform: scale(1.2)
+}
+#menu-close:active {
+  transform: scale(0.8);
+}
+
 .dropdown, .layer {
   position: fixed;
   width: 40rem;
@@ -54,15 +78,11 @@ footer {
   color: white;
   transition: 0.4s ease-in-out;
   background-color: #1e293b;
-
 }
-
 .layer {
   transition-delay: 0.35s;
   background-color: #334155;
-
 }
-
 .dropdown {
   transition-delay: 0.25s;
   gap: 2rem;
@@ -78,7 +98,6 @@ footer {
   margin-left: 8rem;
   margin-top: 8rem;
 }
-
 .dropdown.visible, .layer.visible {
   position: fixed;
   width: 40rem;
@@ -87,58 +106,12 @@ footer {
   left: -4rem;
   top: 0rem;
 }
-
 .dropdown.visible {
   transition-delay: 0.1s;
 }
-
 .layer.visible {
   width: 44rem;
   transition-delay: 0s;
-}
-
-.companyname {
-  font-weight: 900;
-  font-family: 'Space Mono';
-}
-.companyname.header {
-  font-size: 2rem;
-  display: flex;
-}
-.companyname.footer {
-  font-size: 1.4rem;
-}
-
-img {
-  width: 2rem;
-  margin: 0 0.5rem;
-}
-
-#container {
-  width: 200px;
-  height: 1500px;
-}
-
-#background {
-  width: auto;
-  height: 100%;
-  margin: 0;
-}
-
-#menu-close {
-  opacity: 0;
-}
-
-#menu-close.visible {
-  opacity: 1;
-}
-
-#menu-close:hover {
-  transition: 0.2s;
-  transform: scale(1.2)
-}
-#menu-close:active {
-  transform: scale(0.8);
 }
 
 .link {
@@ -146,8 +119,8 @@ img {
   top: 8rem;
   transition: 0.4s;
   opacity: 0;
+  display: flex;
 }
-
 .link.visible {
   top: 0;
   opacity: 1;
@@ -174,4 +147,14 @@ img {
 }
 .four.visible {
   transition-delay: 0.45s;
+}
+
+img {
+  width: 2rem;
+  margin: 0 0.5rem;
+}
+
+#container {
+  width: 200px;
+  height: 1500px;
 }
