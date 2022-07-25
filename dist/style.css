@@ -56,28 +56,27 @@ footer {
   display: flex;
   flex-direction: column;
   color: white;
-  gap: 1rem;
-  transition: 0.4s;
-  animation: ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .layer {
-  transition-delay: 0.1s;
+  transition-delay: 0.35s;
 }
 
 .dropdown {
-  transition-delay: 0s;
+  transition-delay: 0.25s;
+  gap: 2rem;
 }
 .dropdown > div {
   margin-left: 8rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .dropdown > div:first-child {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .dropdown > img {
-  margin-left: 10rem;
-  margin-top: 10rem;
+  margin-left: 8rem;
+  margin-top: 8rem;
 }
 
 .dropdown.visible, .layer.visible {
@@ -129,10 +128,53 @@ img {
   margin: 0;
 }
 
+#menu-close {
+  opacity: 0;
+}
+
+#menu-close.visible {
+  opacity: 1;
+}
+
 #menu-close:hover {
   transition: 0.2s;
   transform: scale(1.2)
 }
 #menu-close:active {
   transform: scale(0.8);
+}
+
+.link {
+  position: relative;
+  top: 8rem;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.link.visible {
+  top: 0;
+  opacity: 1;
+}
+
+.one {
+  transition-delay: 0.15s;
+}
+.two {
+  transition-delay: 0.1s;
+}
+.three {
+  transition-delay: 0.05s;
+}
+
+.one.visible {
+  transition-delay: 0.3s;
+}
+.two.visible {
+  transition-delay: 0.35s;
+}
+.three.visible {
+  transition-delay: 0.4s;
+}
+.four.visible {
+  transition-delay: 0.45s;
 }
