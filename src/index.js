@@ -6,7 +6,6 @@ const links = document.getElementsByClassName('link');
 
 const menuOpen = document.getElementById('menu-open');
 menuOpen.addEventListener('click', () => {
-  menuOpen.classList.add('hidden');
   layer.classList.add('visible');
   dropdown.classList.add('visible');
   menuClose.classList.add('visible')
