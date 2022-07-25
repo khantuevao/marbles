@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #292524;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#menu {
+  margin-top: 0.4rem;
+}
+
+footer {
+  flex-direction: column;
+}
+
+.marbles {
+  font-weight: 900;
+  font-family: 'Space Mono';
+}
+.marbles.header {
+  font-size: 2rem;
+  display: flex;
+}
+.marbles.footer {
+  font-size: 1.4rem;
+}
+
+img {
+  width: 2rem;
+  margin: 0 0.5rem;
+}
+
+#container {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+}
