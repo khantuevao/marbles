@@ -3,14 +3,11 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.hidden {
-  display: none;
+  background-color: #f8fafc;
 }
 
 header, footer {
-  background-color: #1c1917;
+  background-color: #1e293b;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -30,7 +27,7 @@ footer {
 
 #menu-open {
   position: fixed;
-  background-color: #1c1917;
+  background-color: #1e293b;
   border-radius: 100rem;
   padding: 0.6rem;
   margin-top: 1rem;
@@ -49,7 +46,6 @@ footer {
   position: fixed;
   width: 40rem;
   height: 40rem;
-  background-color: #292524;
   border-bottom-right-radius: 50rem;
   left: -40rem;
   top: -40rem;
@@ -57,10 +53,14 @@ footer {
   flex-direction: column;
   color: white;
   transition: 0.4s ease-in-out;
+  background-color: #1e293b;
+
 }
 
 .layer {
   transition-delay: 0.35s;
+  background-color: #334155;
+
 }
 
 .dropdown {
@@ -83,7 +83,6 @@ footer {
   position: fixed;
   width: 40rem;
   height: 40rem;
-  background-color: #292524;
   border-bottom-right-radius: 50rem;
   left: -4rem;
   top: 0rem;
@@ -94,7 +93,6 @@ footer {
 }
 
 .layer.visible {
-  background-color: #44403c;
   width: 44rem;
   transition-delay: 0s;
 }
@@ -117,7 +115,6 @@ img {
 }
 
 #container {
-  border: 1px solid black;
   width: 200px;
   height: 1500px;
 }
