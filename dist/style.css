@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-
 body {
   margin: 0;
   padding: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 header, footer {
-  background-color: #292524;
+  background-color: #1c1917;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -15,23 +18,97 @@ header, footer {
   gap: 0.5rem;
 }
 
-#menu {
-  margin-top: 0.4rem;
+header {
+  width: 100%;
+  padding-left: 5rem;
+  padding-top: 0.95rem;
 }
 
 footer {
   flex-direction: column;
 }
 
-.marbles {
+#menu-open {
+  position: fixed;
+  background-color: #1c1917;
+  border-radius: 100rem;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  transition: 0.2s;
+  animation: ease-in-out;
+}
+#menu-open:hover {
+  transform: scale(1.2);
+}
+#menu-open:active {
+  transform: scale(0.8);
+}
+
+.dropdown, .layer {
+  position: fixed;
+  width: 40rem;
+  height: 40rem;
+  background-color: #292524;
+  border-bottom-right-radius: 50rem;
+  left: -40rem;
+  top: -40rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 1rem;
+  transition: 0.4s;
+  animation: ease-in-out;
+}
+
+.layer {
+  transition-delay: 0.1s;
+}
+
+.dropdown {
+  transition-delay: 0s;
+}
+.dropdown > div {
+  margin-left: 8rem;
+  font-size: 2rem;
+}
+.dropdown > div:first-child {
+  margin-top: 2rem;
+}
+.dropdown > img {
+  margin-left: 10rem;
+  margin-top: 10rem;
+}
+
+.dropdown.visible, .layer.visible {
+  position: fixed;
+  width: 40rem;
+  height: 40rem;
+  background-color: #292524;
+  border-bottom-right-radius: 50rem;
+  left: -4rem;
+  top: 0rem;
+}
+
+.dropdown.visible {
+  transition-delay: 0.1s;
+}
+
+.layer.visible {
+  background-color: #44403c;
+  width: 44rem;
+  transition-delay: 0s;
+}
+
+.companyname {
   font-weight: 900;
   font-family: 'Space Mono';
 }
-.marbles.header {
+.companyname.header {
   font-size: 2rem;
   display: flex;
 }
-.marbles.footer {
+.companyname.footer {
   font-size: 1.4rem;
 }
 
@@ -43,5 +120,19 @@ img {
 #container {
   border: 1px solid black;
   width: 200px;
-  height: 200px;
+  height: 1500px;
+}
+
+#background {
+  width: auto;
+  height: 100%;
+  margin: 0;
+}
+
+#menu-close:hover {
+  transition: 0.2s;
+  transform: scale(1.2)
+}
+#menu-close:active {
+  transform: scale(0.8);
 }
