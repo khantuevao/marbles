@@ -7,7 +7,7 @@ body {
 }
 
 header, footer {
-  background-color: #1e293b;
+  background-color: #171717;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -31,7 +31,7 @@ footer {
   font-family: 'Space Mono';
 }
 .companyname.header {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .companyname.footer {
   font-size: 1.4rem;
@@ -39,10 +39,10 @@ footer {
 
 #menu-open {
   position: fixed;
-  background-color: #1e293b;
+  background-color: #171717;
   border-radius: 100rem;
   padding: 0.6rem;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   margin-left: 1rem;
   transition: 0.2s;
   animation: ease-in-out;
@@ -68,7 +68,7 @@ footer {
   transform: scale(0.8);
 }
 
-.dropdown, .layer {
+.layer.two, .layer.one {
   position: fixed;
   width: 40rem;
   height: 40rem;
@@ -79,19 +79,32 @@ footer {
   flex-direction: column;
   color: white;
   transition: 0.4s ease-in-out;
-  background-color: #1e293b;
+  background-color: #262626;
 }
-.layer {
+.layer.one {
   transition-delay: 0.35s;
-  background-color: #334155;
+  background-color: #404040;
 }
-.dropdown {
+.layer.two {
   transition-delay: 0.25s;
-  gap: 2rem;
 }
 .dropdown > div {
   margin-left: 8rem;
   font-size: 1.8rem;
+}
+.dropdown {
+  visibility: hidden;
+  position: fixed;
+  left: -4rem;
+  top: 0rem;
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dropdown.visible {
+  visibility: visible;
 }
 .dropdown > div:first-child {
   margin-top: 4rem;
@@ -100,7 +113,7 @@ footer {
   margin-left: 8rem;
   margin-top: 8rem;
 }
-.dropdown.visible, .layer.visible {
+.layer.two.visible, .layer.one.visible {
   position: fixed;
   width: 40rem;
   height: 40rem;
@@ -108,10 +121,10 @@ footer {
   left: -4rem;
   top: 0rem;
 }
-.dropdown.visible {
+.layer.two.visible {
   transition-delay: 0.1s;
 }
-.layer.visible {
+.layer.one.visible {
   width: 44rem;
   transition-delay: 0s;
 }
@@ -157,6 +170,33 @@ img {
 }
 
 #container {
-  width: 200px;
   height: 1500px;
+  width: max(100%, 1000px);
+}
+
+#wrapper {
+  width: inherit;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: -10px 25px 10px #171717;
+  border-bottom: ;
+}
+
+video {
+  width: inherit;
+}
+
+a {
+  border: 1px solid #262626;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 1rem;
+  transition: 0.2s;
+  transition-delay: 0s;
+  display: flex;
+}
+a:hover {
+  transform: scale(1.1);
 }

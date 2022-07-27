@@ -1,12 +1,15 @@
 console.log("hello");
 
-const layer = document.querySelector(".layer");
+const layerOne = document.querySelector(".layer.one");
+const layerTwo = document.querySelector(".layer.two");
 const dropdown = document.querySelector(".dropdown");
 const links = document.getElementsByClassName("link");
 
+
 const menuOpen = document.getElementById("menu-open");
 menuOpen.addEventListener("click", () => {
-  layer.classList.add("visible");
+  layerOne.classList.add("visible");
+  layerTwo.classList.add("visible");
   dropdown.classList.add("visible");
   menuClose.classList.add("visible");
   for (let i = 0; i < links.length; i++) {
@@ -16,7 +19,9 @@ menuOpen.addEventListener("click", () => {
 
 const menuClose = document.getElementById("menu-close");
 menuClose.addEventListener("click", () => {
-  layer.classList.remove("visible");
+  layerOne.classList.remove("visible");
+  layerTwo.classList.remove("visible");
+
   dropdown.classList.remove("visible");
   menuOpen.classList.remove("hidden");
   menuClose.classList.remove("visible");
