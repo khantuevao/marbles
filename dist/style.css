@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../src/fonts/Montserrat-Medium.otf);
+}
+
+@font-face {
+  font-family: Proxima;
+  src: url(../src/fonts/Proxima\ Nova\ Font.otf);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -53,46 +63,55 @@ footer {
 #menu-open:active {
   transform: scale(0.8);
 }
+#close {
+  margin-left: 8rem;
+  margin-top: 8rem;
+  transition: 0.2s;
 
+}
 #menu-close {
+  transform: scale(0);
+  
+  transition: 0.4s;
+  transition-delay: 0s;
   opacity: 0;
 }
 #menu-close.visible {
+  transform: scale(1);
+  transition: 0.4s;
+  transition-delay: 0.4s;
   opacity: 1;
 }
-#menu-close:hover {
-  transition: 0.2s;
-  transform: scale(1.2)
-}
-#menu-close:active {
-  transform: scale(0.8);
+#close:hover {
+  transform: scale(1.2);
 }
 
-.layer.two, .layer.one {
+#layer.two, #layer.one {
   position: fixed;
   width: 40rem;
   height: 40rem;
   border-bottom-right-radius: 50rem;
-  left: -40rem;
-  top: -40rem;
+  transform: translateX(-40rem);
+  transform: translateY(-40rem);
   display: flex;
   flex-direction: column;
   color: white;
   transition: 0.4s ease-in-out;
   background-color: #262626;
 }
-.layer.one {
+#layer.one {
   transition-delay: 0.35s;
   background-color: #404040;
 }
-.layer.two {
+#layer.two {
   transition-delay: 0.25s;
 }
-.dropdown > div {
+#dropdown > div {
   margin-left: 8rem;
   font-size: 1.8rem;
+  width: fit-content;
 }
-.dropdown {
+#dropdown {
   visibility: hidden;
   position: fixed;
   left: -4rem;
@@ -102,29 +121,27 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  border-bottom-right-radius: 50rem;
+  font-family: Montserrat;
 }
-.dropdown.visible {
+#dropdown.visible {
   visibility: visible;
 }
-.dropdown > div:first-child {
+#dropdown > div:first-child {
   margin-top: 4rem;
 }
-.dropdown > img {
-  margin-left: 8rem;
-  margin-top: 8rem;
-}
-.layer.two.visible, .layer.one.visible {
+#layer.two.visible, #layer.one.visible {
   position: fixed;
   width: 40rem;
   height: 40rem;
   border-bottom-right-radius: 50rem;
-  left: -4rem;
-  top: 0rem;
+  transform: translateX(0rem);
+  transform: translateY(0rem);
 }
-.layer.two.visible {
+#layer.two.visible {
   transition-delay: 0.1s;
 }
-.layer.one.visible {
+#layer.one.visible {
   width: 44rem;
   transition-delay: 0s;
 }
@@ -171,7 +188,7 @@ img {
 
 #container {
   height: 1500px;
-  width: max(100%, 1000px);
+  width: min(100%, 1000px);
 }
 
 #wrapper {
@@ -187,7 +204,7 @@ video {
 }
 
 a {
-  border: 1px solid #262626;
+  border: 1.5px solid #262626;
   text-decoration: none;
   color: white;
   width: fit-content;
@@ -198,5 +215,5 @@ a {
   display: flex;
 }
 a:hover {
-  transform: scale(1.1);
+  border: 1.5px solid white;
 }
