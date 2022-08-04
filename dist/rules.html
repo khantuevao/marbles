@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title goes here</title>
+  <script src="./main.js" defer></script>
+  <link rel="stylesheet" href="./rules.css">
+  <link rel="stylesheet" href="./dropdown.css">
+  <link rel="stylesheet" href="./header-footer.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="layer" class="one"></div>
+  <div id="layer" class="two"></div>
+  <div id="dropdown">
+    <div class="link one"><a class="menu-link" href=""><img src="../src/icons/home.svg" alt=""> Home</a></div>
+    <div class="link two"><a class="menu-link" href=""><img src="../src/icons/play.svg" alt=""> How to Play</a></div>
+    <div class="link three"><a class="menu-link" href=""><img src="../src/icons/rules.svg" alt=""> Rules</a></div>
+    <div class="link four"><a class="menu-link" href=""><img src="../src/icons/fair.svg" alt=""> Provably Fair</a></div>
+    <div id="close"><img id="menu-close" src="../src/icons/close.svg" alt=""></div>
+  </div>
+
+  <header>
+    <div class="companyname header"><img id="logo" src="../src/imgs/logo.png" alt=""><span>marble</span><span>VERSE</span></div>
+    <img id="menu-open" src="../src/icons/menu.svg" alt="">
+  </header>
+
+
+  <div id="main-container">
+    <div class="section">
+      <div class="section-name">Game Mechanics</div>
+    </div>
+    <div class="section-box">
+      <p>In order to achieve it’s mission of promoting inclusivity and equality of opportunity Marbleverse games have to satisfy 3 main criteria:</p>
+      <p>
+        <ol>
+          <li><span class="bold-text">Simple rules.</span> Anyone can easily understand the game and start playing.</li>
+          <li><span class="bold-text">Game of chance.</span> Assures equality of opportunity for everyone. Bot proof.</li>
+          <li><span class="bold-text">Transparency.</span> Excludes possibility of cheating. Insures integrity of the game.</li>
+        </ol>
+      </p>
+      <p>Marbleverse idea was partly inspired by Netflix’s ‘Squid Game’ TV series. The marbles game (odd or even) featured in the show satisfies all the above criteria, making it a perfect fit for our project.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-name">Rules</div>
+    </div>
+    <div class="section-box">
+      <p>
+        <ul>
+          <li>Each player is dealt 10 marbles at the start.</li>
+          <li>Objective of the game is to collect all of your opponent’s marbles.</li>
+          <li>The are only 2 players (i.e./ 'Hider' and 'Guesser').</li>
+          <li>Each round Hider has to pick an odd or even number from his stack => and Guesser has to do the same. Guesser's objective is to correctly predict if Hider's number is odd or even. He can wager any number he wants.</li>
+          <li>The prize is determined by the amount of marbles Guesser wagered.</li>
+          <li>Example: if the Guesser is correct, he collects the amount of marbles he wagered (e.g. Hider chose 3 marbles, Guesser picked 2 => Guesser collects 2 marbles).</li>
+          <li>If the Guesser is incorrect => Hider collects the amount of marbles wagered by the Guesser (e.g. Hider pick odd, Guesser wagers 8 and guesses incorrectly => loses 8 marbles).</li>
+          <li>If one of the Players is left with only 1 marble he can only assume the Guesser role.</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-name">Tournament format</div>
+    </div>
+    <div class="section-box">
+      <p>Depending on the number of participants either a <a href="https://en.wikipedia.org/wiki/Swiss-system_tournament">swiss system</a> tournament, <a href="https://en.wikipedia.org/wiki/Single-elimination_tournament">single-elimination</a> tournament or a mix of both formats can be used.</p>
+      <p>As an example let’s look at a clear cut single-elimination format and how such a tournament would be conducted:</p>
+      <img src="../src/imgs/tournament-example.webp" alt="">
+    </div>
+
+  </div>
+
+  
+  
+  <footer>
+    <div id="logos">
+      <div><a href="https://twitter.com/MarbleverseNFT"><img src="../src/icons/twitter-logo.svg" alt=""></a></div>
+      <div><a href="https://discord.gg/gzwD2eZK"><img src="../src/icons/discord-logo.svg" alt=""></a></div>
+      <div><a href="https://t.me/MarbleverseNFT"><img src="../src/icons/telegram-logo.svg" alt=""></a></div>
+    </div>
+    <div class="companyname footer">marbleverse</div>
+    <div>Copyright 2022</div>
+    <div>email@marbles.com</div>
+  </footer>
+
+  
+</body>
+</html>
