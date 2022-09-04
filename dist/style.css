@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8fafc;
+  width: 100vw;
 }
 
 #logo {
@@ -217,7 +218,7 @@ img {
 }
 
 #container {
-  width: 100%;
+  width: 100vw;
 }
 #container > img {
   width: inherit;
@@ -225,7 +226,6 @@ img {
 }
 
 video {
-  width: inherit;
   margin: 0;
 }
 
